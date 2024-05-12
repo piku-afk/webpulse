@@ -1,8 +1,12 @@
-version: "0.2"
+version: '0.2'
 ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words: []
-ignoreWords: 
- -  ianvs
+ignoreWords:
+  - ianvs
+  - kysely
+  - kyselify
+  - pino
+  - supabase
 import: []

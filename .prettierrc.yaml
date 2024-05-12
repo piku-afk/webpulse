@@ -9,5 +9,7 @@ importOrder:
   - '<BUILTIN_MODULES>'
   - '<THIRD_PARTY_MODULES>'
   - ''
+  - '^@prisma/(.*)$'
+  - ''
   - '^[./]'
 importOrderTypeScriptVersion: 5.4.2
