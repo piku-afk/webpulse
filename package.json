@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
   "type": "module",
   "scripts": {
-    "dev:engine": "tsx apps/engine/index.ts",
+    "dev:engine": "dotenv -e .env.dev -- tsx --watch apps/engine/index.ts",
     "format": "prettier -w \"**/*.{ts,tsx,json,md}\" --ignore-unknown --cache",
     "migrate:dev": "dotenv -e .env.dev -- prisma migrate dev",
     "migrate:prod": "dotenv -e .env.prod -- prisma migrate deploy",
@@ -17,9 +17,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
     "@prisma/client": "5.13.0",
+    "@sinclair/typebox": "^0.32.30",
     "@supabase/supabase-js": "^2.43.1",
+    "close-with-grace": "^1.3.0",
     "dotenv-cli": "^7.4.2",
+    "fastify": "^4.27.0",
     "kysely": "^0.27.3",
     "pg": "^8.11.5",
     "pino": "^9.0.0",

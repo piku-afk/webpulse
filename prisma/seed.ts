@@ -1,20 +1,19 @@
 import { isDeepStrictEqual } from 'node:util';
-import { auditDetails } from 'apps/constants/auditDetails.js';
-import { logger } from 'apps/shared/logger.js';
 import { Kysely, PostgresDialect } from 'kysely';
 import type { KyselifyDatabase } from 'kysely-supabase';
 import pg from 'pg';
 
 import type { Database as SupabaseDatabase } from '@prisma/dbTypes.js';
 
-type Database = KyselifyDatabase<SupabaseDatabase>;
+import { logger } from '@shared/logger.js';
+import { auditDetails } from '@constants/auditDetails.js';
 
-const connectionString = process.env.DATABASE_URL;
+type Database = KyselifyDatabase<SupabaseDatabase>;
 
 const db = new Kysely<Database>({
   dialect: new PostgresDialect({
     pool: new pg.Pool({
-      connectionString,
+      connectionString: process.env.DATABASE_URL,
     }),
   }),
 });

@@ -1,7 +1,5 @@
 # Track Web Vitals - 2
 
-Track Web Vitals & visualize scores for performance insights.
-
 This project offers a solution for you to track your website's performance over time using Lighthouse and store the scores securely in a PostgreSQL database. Additionally, it provides a dedicated dashboard to visualize these scores and identify trends.
 
 ## Apps

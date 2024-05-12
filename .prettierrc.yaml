@@ -11,5 +11,10 @@ importOrder:
   - ''
   - '^@prisma/(.*)$'
   - ''
+  - '^@types/(.*)$'
+  - ''
+  - '^@shared/(.*)$'
+  - '^@constants/(.*)$'
+  - ''
   - '^[./]'
 importOrderTypeScriptVersion: 5.4.2

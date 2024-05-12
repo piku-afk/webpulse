@@ -13,7 +13,9 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@prisma/*": ["prisma/*"]
+      "@constants/*": ["apps/constants/*"],
+      "@prisma/*": ["prisma/*"],
+      "@shared/*": ["shared/*"]
     },
 
     /* linting */
