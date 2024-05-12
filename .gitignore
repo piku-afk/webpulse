@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# Environment variable files
+.env
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
