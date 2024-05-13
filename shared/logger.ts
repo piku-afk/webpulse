@@ -1,4 +1,4 @@
 import { pino } from 'pino';
 import pretty from 'pino-pretty';
 
-export const logger = pino(pretty.default({ colorize: true }));
+export const logger = pino(pretty.default({ colorize: true, ignore: 'pid,hostname' }));

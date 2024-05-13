@@ -28,9 +28,10 @@
     /* bundler options */
     "noEmit": true,
     "newLine": "lf",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "removeComments": true,
     "verbatimModuleSyntax": true
   },
-  "exclude": ["coverage"]
+  "exclude": ["coverage"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

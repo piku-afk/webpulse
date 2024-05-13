@@ -1,6 +1,6 @@
 import type { FastifyInstance } from 'fastify';
 
-import { HealthSchema } from '@shared/types/health.type.js';
+import { HealthSchema } from '@shared/schema/health.type.js';
 
 import { getHealth } from './health.controller.js';
 
