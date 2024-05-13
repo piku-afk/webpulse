@@ -13,9 +13,9 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@constants/*": ["apps/constants/*"],
-      "@prisma/*": ["prisma/*"],
-      "@shared/*": ["shared/*"]
+      "#constants/*": ["apps/constants/*"],
+      "#prisma/*": ["prisma/*"],
+      "#shared/*": ["shared/*"]
     },
 
     /* linting */
@@ -33,5 +33,4 @@
     "verbatimModuleSyntax": true
   },
   "exclude": ["coverage"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }

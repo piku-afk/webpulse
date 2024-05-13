@@ -1,17 +1,17 @@
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import type { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import fastifyVite from '@fastify/vite';
 import Fastify, { type FastifyInstance } from 'fastify';
 
-import { logger } from '@shared/logger.js';
+import { logger } from '#shared/logger.js';
 
 import { healthRouter } from '../modules/health/health.route.js';
 
-const path = fileURLToPath(import.meta.url);
-const root = resolve(dirname(path), '..', '..', '..');
+interface ServerParams {
+  viteConfigPath: string;
+}
 
-export const buildServer = async (): Promise<FastifyInstance> => {
+export const buildServer = async (params: ServerParams): Promise<FastifyInstance> => {
+  const { viteConfigPath } = params;
   const fastify = Fastify({
     logger: {
       transport: {
@@ -25,8 +25,7 @@ export const buildServer = async (): Promise<FastifyInstance> => {
   }).withTypeProvider<TypeBoxTypeProvider>();
 
   await fastify.register(fastifyVite, {
-    root,
-    dev: true,
+    root: viteConfigPath,
     spa: true,
   });
 
@@ -42,7 +41,7 @@ export const buildServer = async (): Promise<FastifyInstance> => {
     return reply.html();
   });
 
-  logger.info('Setup Fastify Vite');
+  logger.info('Setup fastify-vite');
   await fastify.vite.ready();
 
   return fastify;

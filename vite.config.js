@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 const root = resolve('apps', 'dashboard');
-const outDir = resolve('build');
+const outDir = resolve('build', 'dashboard');
 
 export default defineConfig({
   root,

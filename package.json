@@ -4,13 +4,16 @@
   "description": "Track Web Vitals & visualize scores for performance insights.",
   "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
   "type": "module",
+  "main": "build/engine/index.js",
   "scripts": {
-    "dev": "dotenv -e .env.prod -- tsx watch --clear-screen=false --ignore ./vite.config.ts.* apps/engine/index.ts --dev",
-    "build": "vite build",
-    "start": "dotenv -e .env.prod -- tsx apps/engine/index.ts",
+    "dev": "dotenv -e .env.prod -- tsx watch --clear-screen=false --ignore ./vite.config.js.* apps/engine/index.ts --dev",
+    "build": "conc --n engine,dashboard \"pnpm build:engine\" \"pnpm build:dashboard\"",
+    "build:dashboard": "dotenv -e .env.prod -- vite build",
+    "build:engine": "dotenv -e .env.prod -- pkgroll --src apps/engine --dist build/engine",
+    "start": "dotenv -e .env.prod -- node build/engine/index.js",
     "format": "prettier -w \"**/*.{ts,tsx,json,md}\" --ignore-unknown --cache",
-    "db:migrate:dev": "dotenv -e .env.dev -- prisma migrate dev",
-    "db:migrate:prod": "dotenv -e .env.prod -- prisma migrate deploy",
+    "db:migrate:gen": "dotenv -e .env.prod -- prisma migrate dev --create-only --skip-generate",
+    "db:migrate:apply": "dotenv -e .env.prod -- prisma migrate deploy",
     "db:seed": "dotenv -e .env.prod -- tsx ./prisma/seed.ts",
     "db:reset": "dotenv -e .env.prod -- prisma db push --force-reset",
     "db:pull": "dotenv -e .env.prod -- prisma db pull",
@@ -39,7 +42,9 @@
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
+    "concurrently": "^8.2.2",
     "kysely-supabase": "^0.1.0",
+    "pkgroll": "^2.0.2",
     "prettier": "^3.2.5",
     "prisma": "^5.13.0",
     "supabase": "^1.165.0",
@@ -47,5 +52,10 @@
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vite-tsconfig-paths": "^4.3.2"
+  },
+  "imports": {
+    "#constants/*": "./apps/constants/*",
+    "#prisma/*": "./prisma/*",
+    "#shared/*": "./shared/*"
   }
 }

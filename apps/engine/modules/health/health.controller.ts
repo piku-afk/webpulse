@@ -1,4 +1,4 @@
-import type { Health } from '@shared/schema/health.type.js';
+import type { Health } from '#shared/schema/health.type.js';
 
 import { checkDatabaseHealth, getCurrentTimeStamp } from './health.service.js';
 

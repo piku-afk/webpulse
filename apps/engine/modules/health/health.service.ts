@@ -1,5 +1,6 @@
-import { db } from 'apps/engine/utils/db.js';
 import { sql } from 'kysely';
+
+import { db } from '../../utils/db.js';
 
 /**
  * Checks the health of the database by pinging the database to test the connection.

@@ -3,10 +3,10 @@ import { Kysely, PostgresDialect } from 'kysely';
 import type { KyselifyDatabase } from 'kysely-supabase';
 import pg from 'pg';
 
-import type { Database as SupabaseDatabase } from '@prisma/dbTypes.js';
+import type { Database as SupabaseDatabase } from '#prisma/dbTypes.js';
 
-import { logger } from '@shared/logger.js';
-import { auditDetails } from '@constants/auditDetails.js';
+import { logger } from '#shared/logger.js';
+import { auditDetails } from '#constants/auditDetails.js';
 
 type Database = KyselifyDatabase<SupabaseDatabase>;
 

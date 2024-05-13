@@ -1,4 +1,4 @@
-import type { Database } from '@prisma/dbTypes.js';
+import type { Database } from '#prisma/dbTypes.js';
 
 type AuditDetails = Database['public']['Tables']['audit_details']['Row'];
 
