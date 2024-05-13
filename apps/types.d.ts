@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import type { IncomingMessage, Server, ServerResponse } from 'node:http';
 import type {
   FastifyBaseLogger,

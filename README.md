@@ -7,7 +7,7 @@ This project offers a solution for you to track your website's performance over 
 This section lists the applications within the projects. You can find more details about each project in their respective README.md files.
 
 - client - Provides a visual representation of your website's performance metrics.
-- engine - Processes the collected audits, stores it securely in the database, and powers the functionality of the client.
+- server - Processes the collected audits, stores it securely in the database, and powers the functionality of the client.
 - runner - Automates collecting performance audits from your website using Lighthouse.
 
 ## Additional Notes
