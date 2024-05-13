@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-const root = resolve('apps', 'dashboard');
-const outDir = resolve('build', 'dashboard');
+const root = resolve('apps', 'client');
+const outDir = resolve('build', 'client');
 
 export default defineConfig({
   root,

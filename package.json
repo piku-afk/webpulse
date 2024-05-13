@@ -7,8 +7,8 @@
   "main": "build/engine/index.js",
   "scripts": {
     "dev": "dotenv -e .env.prod -- tsx watch --clear-screen=false --ignore ./vite.config.js.* apps/engine/index.ts --dev",
-    "build": "conc --n engine,dashboard \"pnpm build:engine\" \"pnpm build:dashboard\"",
-    "build:dashboard": "dotenv -e .env.prod -- vite build",
+    "build": "conc --n engine,client \"pnpm build:engine\" \"pnpm build:client\"",
+    "build:client": "dotenv -e .env.prod -- vite build",
     "build:engine": "dotenv -e .env.prod -- pkgroll --src apps/engine --dist build/engine",
     "start": "dotenv -e .env.prod -- node build/engine/index.js",
     "format": "prettier -w \"**/*.{ts,tsx,json,md}\" --ignore-unknown --cache",
@@ -54,7 +54,7 @@
     "vite-tsconfig-paths": "^4.3.2"
   },
   "imports": {
-    "#constants/*": "./apps/constants/*",
+    "#constants/*": "./constants/*",
     "#prisma/*": "./prisma/*",
     "#shared/*": "./shared/*"
   }
