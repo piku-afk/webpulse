@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Build 
+build
+
+# Miscellaneous files
+Dockerfie
+.dockerignore
+.git
+.gitignore
+.vscode
+.env.prod
+.env.dev
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
