@@ -12,6 +12,11 @@ Dockerfie
 .vscode
 .env.prod
 .env.dev
+.nvmrc
+.prettierrc.yaml
+cspell.config.yaml
+fly.toml
+
 
 # Logs
 logs

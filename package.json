@@ -2,9 +2,16 @@
   "name": "track-web-vitals-2",
   "version": "1.0.0",
   "description": "Track Web Vitals & visualize scores for performance insights.",
-  "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
+  "author": "piku-afk",
+  "license": "MIT",
   "type": "module",
   "main": "build/server/index.js",
+  "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
+  "imports": {
+    "#constants/*": "./constants/*",
+    "#prisma/*": "./prisma/*",
+    "#shared/*": "./shared/*"
+  },
   "scripts": {
     "dev": "dotenv -e .env.prod -- tsx watch --clear-screen=false --ignore ./vite.config.js.* apps/server/index.ts --dev",
     "build": "conc --n server,client \"pnpm build:server\" \"pnpm build:client\"",
@@ -19,13 +26,11 @@
     "db:pull": "dotenv -e .env.prod -- prisma db pull",
     "db:types": "dotenv -e .env.prod -- bash -c 'pnpm dlx supabase gen types typescript --db-url  $DATABASE_URL > ./prisma/dbTypes.ts'"
   },
-  "author": "piku-afk",
-  "license": "MIT",
   "dependencies": {
     "@fastify/type-provider-typebox": "^4.0.0",
     "@fastify/vite": "^6.0.6",
-    "@prisma/client": "5.13.0",
     "@sinclair/typebox": "^0.32.30",
+    "@vitejs/plugin-react-swc": "^3.6.0",
     "close-with-grace": "^1.3.0",
     "dotenv-cli": "^7.4.2",
     "fastify": "^4.27.0",
@@ -34,14 +39,14 @@
     "pino": "^9.0.0",
     "pino-pretty": "^11.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "@types/pg": "^8.11.6",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react-swc": "^3.6.0",
     "concurrently": "^8.2.2",
     "kysely-supabase": "^0.1.0",
     "pkgroll": "^2.0.2",
@@ -50,12 +55,6 @@
     "supabase": "^1.165.0",
     "tsx": "^4.10.0",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vite-tsconfig-paths": "^4.3.2"
-  },
-  "imports": {
-    "#constants/*": "./constants/*",
-    "#prisma/*": "./prisma/*",
-    "#shared/*": "./shared/*"
+    "vite": "^5.2.11"
   }
 }

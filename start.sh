@@ -11,4 +11,4 @@ docker image rm $imageName
 
 # create image
 docker build -t pikuafk/track-web-vitals-2:$version .
-docker run -d -p 3000:3000 --name $containerName $imageName
+docker run -d --env-file .env.prod -p 3000:3000 --name $containerName $imageName
