@@ -1,5 +1,7 @@
 {
-  "folders": [
-    { "name": "webpulse", "path": "." },
-  ],
+	"folders": [
+		{ "name": "apps/server", "path": "./apps/server" },
+		{ "name": "common/ts-config", "path": "./common/ts-config" },
+		{ "name": "webpulse", "path": "." }
+	]
 }

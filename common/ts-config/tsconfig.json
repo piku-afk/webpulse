@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		/* base options */
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+
+		/* linting */
+		"strict": true,
+		"checkJs": true,
+		"noUnusedLocals": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+
+		/* bundler options */
+		"noEmit": true,
+		"newLine": "lf",
+		"jsx": "preserve",
+		"removeComments": true,
+		"verbatimModuleSyntax": true
+	}
+}
