@@ -1,0 +1,10 @@
+{
+  "extends": "ts-config",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ESNext"],
+  },
+  "include": ["src"]
+}
