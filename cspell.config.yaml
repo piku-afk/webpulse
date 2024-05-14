@@ -14,4 +14,7 @@ ignoreWords:
   - pkgroll
   - supabase
   - typebox
+  - unihead
+  - valtio
+  - webpulse
 import: []

@@ -2,7 +2,7 @@
 FROM node:18.20.2-alpine AS base
 
 # Define application name
-ARG APP_NAME="track-web-vitals-2"
+ARG APP_NAME="webpulse"
 
 # Set environment variables for pnpm
 ENV PNPM_HOME="/pnpm"
@@ -31,23 +31,26 @@ COPY . .
 RUN pnpm run build
 
 # Production stage
-FROM base AS production
+# FROM base AS production
 
 # Copy essential configuration files
-COPY package.json .
-COPY pnpm-lock.yaml .
-COPY vite.config.js .
+# COPY package.json .
+# COPY pnpm-lock.yaml .
+# COPY vite.config.ts .
 
-# Copy client application code
-ADD apps/client /${APP_NAME}/apps/client
+# Copy client source code
+# ADD src /${APP_NAME}/src
 
 # Install dependencies with production flag and use cached pnpm store
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+# RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+# RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 # Copy built production files from build stage
-COPY --from=build /${APP_NAME}/build /${APP_NAME}/build
+# COPY --from=build /${APP_NAME}/build /${APP_NAME}/build
+
+RUN ls -la
 
 EXPOSE 3000
 
 # Start command to run the application
-CMD [ "node", "build/server/index.js" ]
+CMD [ "pnpm", "start" ]

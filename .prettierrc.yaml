@@ -9,6 +9,8 @@ importOrder:
   - '<BUILTIN_MODULES>'
   - '<THIRD_PARTY_MODULES>'
   - ''
+  - '^#server/(.*)$'
+  - ''
   - '^#prisma/(.*)$'
   - ''
   - '^#types/(.*)$'
