@@ -1,0 +1,4 @@
+dependencyTypes:
+  - 'dev'
+  - 'peer'
+  - 'prod'

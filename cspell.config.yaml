@@ -4,6 +4,7 @@ dictionaryDefinitions: []
 dictionaries: []
 words: []
 ignoreWords:
+  - dotenvx
   - fastify
   - ianvs
   - kysely
@@ -13,8 +14,7 @@ ignoreWords:
   - pino
   - pkgroll
   - supabase
+  - syncpack
   - typebox
-  - unihead
-  - valtio
   - webpulse
 import: []
