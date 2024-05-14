@@ -4,6 +4,7 @@ import Fastify, { type FastifyInstance } from 'fastify';
 
 import { logger } from '#shared/logger.js';
 
+import { authRouter } from '../modules/auth/auth.route.js';
 import { healthRouter } from '../modules/health/health.route.js';
 
 interface ServerParams {
@@ -33,6 +34,7 @@ export const buildServer = async (params: ServerParams): Promise<FastifyInstance
   await fastify.register(
     async () => {
       await fastify.register(healthRouter, { prefix: '/health' });
+      await fastify.register(authRouter, { prefix: '/auth' });
     },
     { prefix: '/api' },
   );
