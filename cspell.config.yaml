@@ -8,6 +8,7 @@ ignoreWords:
   - ianvs
   - kysely
   - kyselify
+  - mantine
   - piku
   - pino
   - pkgroll

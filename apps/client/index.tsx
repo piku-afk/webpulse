@@ -1,10 +1,7 @@
-import { StrictMode } from 'react';
+import '@mantine/core/styles.css';
+
 import { createRoot } from 'react-dom/client';
 
-import { App } from './App.jsx';
+import { createApp } from './app.js';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+createRoot(document.getElementById('root')!).render(createApp());
