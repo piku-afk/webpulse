@@ -1,5 +1,6 @@
 {
 	"folders": [
+		{ "name": "@webpulse/client", "path": "./apps/client" },
 		{ "name": "@webpulse/server", "path": "./apps/server" },
 		{ "name": "@webpulse/constants", "path": "./common/constants" },
 		{ "name": "@webpulse/logger", "path": "./common/logger" },
