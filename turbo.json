@@ -3,10 +3,20 @@
   "pipeline": {
     "build": {
       "outputs": [
-        "apps/server/build/**"
+        "apps/server/build/**",
+        "common/constants/build/**",
+        "common/schemas/build/**"
       ],
       "dependsOn": [
         "^build"
+      ]
+    },
+    "db:types": {
+      "outputs": [
+        "common/schemas/src/database.ts"
+      ],
+      "dependsOn": [
+        "^db:types"
       ]
     },
     "dev": {

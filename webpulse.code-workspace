@@ -3,6 +3,20 @@
 		{ "name": "@webpulse/server", "path": "./apps/server" },
 		{ "name": "@webpulse/constants", "path": "./common/constants" },
 		{ "name": "@webpulse/ts-config", "path": "./common/ts-config" },
+		{ "name": "@webpulse/schemas", "path": "./common/schemas" },
 		{ "name": "webpulse", "path": "." }
-	]
+	],
+	"settings": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"[prisma]": {
+			"editor.defaultFormatter": "Prisma.prisma"
+		},
+		"[dockerfile]": {
+			"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+		},
+		"[shellscript]": {
+			"editor.defaultFormatter": "foxundermoon.shell-format"
+		}
+	}
 }

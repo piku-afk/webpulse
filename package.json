@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "format": "prettier -w \"**/*.{ts,tsx,html,css,yaml,md}\" --ignore-unknown --cache",
+    "format": "prettier -w --ignore-unknown --cache \"**/*.{ts,tsx,html,css,yaml,md}\"",
+    "db:types": "dotenvx run -f .env.prod -- turbo run --filter @webpulse/schemas db:types",
     "sync:all": "syncpack list",
     "sync:list": "syncpack list-mismatches",
     "sync:fix": "syncpack fix-mismatches && pnpm install"
