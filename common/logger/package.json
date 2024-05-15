@@ -1,0 +1,21 @@
+{
+  "name": "@webpulse/logger",
+  "version": "0.0.0",
+  "author": "piku-afk",
+  "type": "module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "dev": "pkgroll --watch --dist ./build",
+    "build": "pkgroll --minify --dist ./build"
+  },
+  "dependencies": {
+    "@fastify/one-line-logger": "^1.3.0",
+    "pino": "^9.1.0"
+  },
+  "devDependencies": {
+    "@webpulse/ts-config": "workspace:*",
+    "pkgroll": "^2.0.2",
+    "typescript": "^5.4.5"
+  }
+}

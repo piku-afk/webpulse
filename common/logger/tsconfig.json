@@ -1,0 +1,9 @@
+{
+	"extends": "@webpulse/ts-config",
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ESNext"]
+	}
+}
