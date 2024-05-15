@@ -7,8 +7,9 @@
   "type": "module",
   "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
   "scripts": {
-    "dev": "turbo run dev",
+    "dev": "dotenvx run -f .env.prod -- turbo run dev",
     "build": "turbo run build",
+    "start": "dotenvx run -f .env.prod -- turbo run start",
     "format": "prettier -w --ignore-unknown --cache \"**/*.{ts,tsx,html,css,yaml,md}\"",
     "db:types": "dotenvx run -f .env.prod -- turbo run --filter @webpulse/schemas db:types",
     "sync:all": "syncpack list",

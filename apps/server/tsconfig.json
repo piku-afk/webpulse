@@ -1,10 +1,14 @@
 {
-  "extends": "@webpulse/ts-config",
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "lib": ["DOM","ESNext"],
-  },
-  "include": ["src", "src/index.ts"]
+	"extends": "@webpulse/ts-config",
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["DOM", "ESNext"],
+
+		"paths": {
+			"#utils/*": ["./src/utils/*"]
+		}
+	},
+	"include": ["src", "src/index.ts"]
 }
