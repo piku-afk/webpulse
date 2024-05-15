@@ -4,7 +4,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "lib": ["DOM","ESNext"],
+    "lib": ["ESNext"],
   },
-  "include": ["src", "src/index.ts"]
+  "include": ["src", "index.ts", "auditDetails.ts"]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "@webpulse/server",
   "version": "0.0.0",
   "author": "piku-afk",
   "type": "module",
@@ -8,9 +8,12 @@
     "dev": "tsx watch src/index.ts",
     "build": "pkgroll --dist ./build"
   },
+  "dependencies": {
+    "@webpulse/constants":  "workspace:*"
+  },
   "devDependencies": {
     "pkgroll": "^2.0.2",
-    "ts-config":  "workspace:*",
+    "@webpulse/ts-config":  "workspace:*",
     "tsx": "^4.10.2",
     "typescript": "^5.4.5"
   }
