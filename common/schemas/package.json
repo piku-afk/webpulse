@@ -1,5 +1,5 @@
 {
-  "name": "@webpulse/constants",
+  "name": "@webpulse/schemas",
   "version": "0.0.0",
   "author": "piku-afk",
   "type": "module",
@@ -7,12 +7,16 @@
   "types": "build/index.d.ts",
   "scripts": {
     "dev": "pkgroll --watch --dist ./build",
-    "build": "pkgroll --minify --dist ./build"
+    "build": "pkgroll --minify --dist ./build",
+    "db:types": "supabase gen types typescript --db-url  \"$DATABASE_URL\" > database.ts"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.30"
   },
   "devDependencies": {
-    "@webpulse/schemas": "workspace:*",
     "@webpulse/ts-config": "workspace:*",
     "pkgroll": "^2.0.2",
+    "supabase": "^1.167.4",
     "typescript": "^5.4.5"
   }
 }

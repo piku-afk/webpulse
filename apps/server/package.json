@@ -5,16 +5,20 @@
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "conc -n build,dev \"pnpm dev:build\" \"pnpm dev:start\"",
+    "dev:build": "pkgroll --watch --dist ./build",
+    "dev:start": "node --watch build/index.js",
+    "start": "node build/index",
     "build": "pkgroll --dist ./build"
   },
   "dependencies": {
-    "@webpulse/constants":  "workspace:*"
+    "@webpulse/constants": "workspace:*",
+    "@webpulse/schemas": "workspace:*"
   },
   "devDependencies": {
+    "@webpulse/ts-config": "workspace:*",
+    "concurrently": "^8.2.2",
     "pkgroll": "^2.0.2",
-    "@webpulse/ts-config":  "workspace:*",
-    "tsx": "^4.10.2",
     "typescript": "^5.4.5"
   }
 }

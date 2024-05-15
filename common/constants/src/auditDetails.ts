@@ -1,4 +1,6 @@
-type AuditDetails = any;
+import type { Tables } from '@webpulse/schemas';
+
+type AuditDetails = Tables<'audit_details'>;
 
 export const auditDetails: AuditDetails[] = [
   {
