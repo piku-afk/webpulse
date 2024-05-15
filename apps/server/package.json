@@ -11,12 +11,23 @@
     "start": "node build/index.js",
     "build": "pkgroll --minify --dist ./build"
   },
+  "imports": {
+    "#utils/*": "./src/utils/*"
+  },
   "dependencies": {
+    "@fastify/type-provider-typebox": "^4.0.0",
+    "@supabase/supabase-js": "^2.43.2",
     "@webpulse/constants": "workspace:*",
     "@webpulse/logger": "workspace:*",
-    "@webpulse/schemas": "workspace:*"
+    "@webpulse/schemas": "workspace:*",
+    "close-with-grace": "^1.3.0",
+    "fastify": "^4.27.0",
+    "kysely": "^0.27.3",
+    "kysely-supabase": "^0.1.0",
+    "pg": "^8.11.5"
   },
   "devDependencies": {
+    "@types/pg": "^8.11.6",
     "@webpulse/ts-config": "workspace:*",
     "concurrently": "^8.2.2",
     "pkgroll": "^2.0.2",
