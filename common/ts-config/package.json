@@ -1,5 +1,5 @@
 {
-  "name": "ts-config",
+  "name": "@webpulse/ts-config",
   "version": "0.0.0",
   "author": "piku-afk",
   "main": "tsconfig.json"

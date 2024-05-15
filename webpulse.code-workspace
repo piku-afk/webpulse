@@ -1,7 +1,8 @@
 {
 	"folders": [
-		{ "name": "apps/server", "path": "./apps/server" },
-		{ "name": "common/ts-config", "path": "./common/ts-config" },
+		{ "name": "@webpulse/server", "path": "./apps/server" },
+		{ "name": "@webpulse/constants", "path": "./common/constants" },
+		{ "name": "@webpulse/ts-config", "path": "./common/ts-config" },
 		{ "name": "webpulse", "path": "." }
 	]
 }

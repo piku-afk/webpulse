@@ -22,16 +22,29 @@ importers:
         version: 12.3.2(typescript@5.4.5)
 
   apps/server:
+    dependencies:
+      '@webpulse/constants':
+        specifier: workspace:*
+        version: link:../../common/constants
     devDependencies:
+      '@webpulse/ts-config':
+        specifier: workspace:*
+        version: link:../../common/ts-config
       pkgroll:
         specifier: ^2.0.2
         version: 2.0.2(typescript@5.4.5)
-      ts-config:
-        specifier: workspace:*
-        version: link:../../common/ts-config
       tsx:
         specifier: ^4.10.2
         version: 4.10.2
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  common/constants:
+    devDependencies:
+      '@webpulse/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
