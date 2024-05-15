@@ -2,8 +2,9 @@
 	"folders": [
 		{ "name": "@webpulse/server", "path": "./apps/server" },
 		{ "name": "@webpulse/constants", "path": "./common/constants" },
-		{ "name": "@webpulse/ts-config", "path": "./common/ts-config" },
+		{ "name": "@webpulse/logger", "path": "./common/logger" },
 		{ "name": "@webpulse/schemas", "path": "./common/schemas" },
+		{ "name": "@webpulse/ts-config", "path": "./common/ts-config" },
 		{ "name": "webpulse", "path": "." }
 	],
 	"settings": {

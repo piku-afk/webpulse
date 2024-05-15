@@ -7,18 +7,20 @@
   "scripts": {
     "dev": "conc -n build,dev \"pnpm dev:build\" \"pnpm dev:start\"",
     "dev:build": "pkgroll --watch --dist ./build",
-    "dev:start": "node --watch build/index.js",
-    "start": "node build/index",
-    "build": "pkgroll --dist ./build"
+    "dev:start": "tsx watch --clear-screen=false build/index.js",
+    "start": "node build/index.js",
+    "build": "pkgroll --minify --dist ./build"
   },
   "dependencies": {
     "@webpulse/constants": "workspace:*",
+    "@webpulse/logger": "workspace:*",
     "@webpulse/schemas": "workspace:*"
   },
   "devDependencies": {
     "@webpulse/ts-config": "workspace:*",
     "concurrently": "^8.2.2",
     "pkgroll": "^2.0.2",
+    "tsx": "^4.10.2",
     "typescript": "^5.4.5"
   }
 }
