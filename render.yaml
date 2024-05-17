@@ -1,0 +1,24 @@
+version: '1'
+services:
+  - type: web
+    name: webpulse_server
+    runtime: docker
+    region: singapore
+    plan: free
+    repo: https://github.com/piku-afk/webpulse
+    branch: monorepo
+    autoDeploy: false
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    scaling:
+      minInstances: 1
+    envVars:
+      - key: TURBO_TELEMETRY_DISABLED
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
