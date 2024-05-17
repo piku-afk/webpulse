@@ -10,5 +10,5 @@
 			"#utils/*": ["./src/utils/*"]
 		}
 	},
-	"include": ["src", "src/index.ts"]
+	"include": ["src", "esbuild.ts"]
 }

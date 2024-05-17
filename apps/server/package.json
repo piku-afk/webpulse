@@ -6,13 +6,10 @@
   "main": "build/index.js",
   "scripts": {
     "dev": "conc -n build,dev \"pnpm dev:build\" \"pnpm dev:start\"",
-    "dev:build": "pkgroll --watch --dist ./build",
+    "dev:build": "tsx esbuild.ts --dev",
     "dev:start": "tsx watch --clear-screen=false build/index.js",
     "start": "node build/index.js",
-    "build": "pkgroll --minify --dist ./build"
-  },
-  "imports": {
-    "#utils/*": "./src/utils/*"
+    "build": "tsx esbuild.ts"
   },
   "dependencies": {
     "@fastify/type-provider-typebox": "^4.0.0",
@@ -30,7 +27,7 @@
     "@types/pg": "^8.11.6",
     "@webpulse/ts-config": "workspace:*",
     "concurrently": "^8.2.2",
-    "pkgroll": "^2.0.2",
+    "esbuild": "^0.21.2",
     "tsx": "^4.10.2",
     "typescript": "^5.4.5"
   }

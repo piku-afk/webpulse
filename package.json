@@ -20,6 +20,7 @@
     "@dotenvx/dotenvx": "^0.39.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
     "prettier": "^3.2.5",
-    "syncpack": "^12.3.2"
+    "syncpack": "^12.3.2",
+    "turbo": "^1.13.3"
   }
 }

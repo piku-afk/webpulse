@@ -3,19 +3,15 @@
   "version": "0.0.0",
   "author": "piku-afk",
   "type": "module",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "pkgroll --watch --dist ./build",
-    "build": "pkgroll --minify --dist ./build",
-    "db:types": "supabase gen types typescript --db-url  \"$DATABASE_URL\" > database.ts"
+    "db:types": "supabase gen types typescript --db-url  \"$DATABASE_URL\" > src/database.ts"
   },
   "dependencies": {
     "@sinclair/typebox": "^0.32.30"
   },
   "devDependencies": {
     "@webpulse/ts-config": "workspace:*",
-    "pkgroll": "^2.0.2",
     "supabase": "^1.167.4",
     "typescript": "^5.4.5"
   }

@@ -10,9 +10,9 @@ ignoreWords:
   - kysely
   - kyselify
   - mantine
+  - outfile
   - piku
   - pino
-  - pkgroll
   - supabase
   - syncpack
   - typebox
