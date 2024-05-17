@@ -1,9 +1,9 @@
 services:
   webpulse:
-    image: pikuafk/webpulse
+    image: pikuafk/webpulse.server:0.0.0
     env_file:
       - .env.prod
-    container_name: webpulse
+    container_name: webpulse.server
     build:
       context: .
     ports:
