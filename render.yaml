@@ -1,7 +1,7 @@
 version: '1'
 services:
   - type: web
-    name: webpulse_server
+    name: webpulse.server
     runtime: docker
     region: singapore
     plan: free
