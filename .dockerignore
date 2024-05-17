@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Environment variable files
+.env
+.env.*
+
+# Build 
+build
+
+# Logs
+logs
+*.log
+pnpm-debug.log*
+.turbo

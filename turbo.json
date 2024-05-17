@@ -6,9 +6,7 @@
   "pipeline": {
     "build": {
       "outputs": [
-        "apps/server/build/**",
-        "common/constants/build/**",
-        "common/schemas/build/**"
+        "apps/server/build/**"
       ],
       "dependsOn": [
         "^build"
@@ -17,9 +15,6 @@
     "db:types": {
       "outputs": [
         "common/schemas/src/database.ts"
-      ],
-      "dependsOn": [
-        "^db:types"
       ]
     },
     "start": {
