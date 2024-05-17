@@ -13,6 +13,8 @@ services:
     healthCheckPath: /api/health
     scaling:
       minInstances: 1
+      maxInstances: 2
+      targetCPUPercent: 90
     envVars:
       - key: TURBO_TELEMETRY_DISABLED
         sync: false
