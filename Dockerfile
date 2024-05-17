@@ -29,8 +29,9 @@ FROM base AS prod_server
 WORKDIR /app
 USER node
 COPY --from=build_server /app/apps/server/build .
+COPY --from=build_server /app/apps/server/package.json .
 EXPOSE 4000
-CMD [ "node", "index.mjs" ]
+CMD [ "node", "index.js" ]
 
 # FROM nginx:1.18.0-alpine AS prod_client
 # COPY nginx.conf /etc/nginx/nginx.conf
