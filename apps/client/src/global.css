@@ -1,0 +1,46 @@
+:root {
+  --mantine-color-black: #101828;
+  --mantine-font-family-headings: 'Inter Variable', sans-serif;
+  --mantine-radius-default: calc(0.5rem * var(--mantine-scale));
+  --mantine-color-dracula-0: #f6ecff;
+  --mantine-color-dracula-1: #e7d6fb;
+  --mantine-color-dracula-2: #caabf1;
+  --mantine-color-dracula-3: #ac7ce8;
+  --mantine-color-dracula-4: #9354e0;
+  --mantine-color-dracula-5: #833cdb;
+  --mantine-color-dracula-6: #7b2eda;
+  --mantine-color-dracula-7: #6921c2;
+  --mantine-color-dracula-8: #5d1cae;
+  --mantine-color-dracula-9: #501599;
+}
+:root[data-mantine-color-scheme='dark'] {
+  --mantine-color-dracula-text: var(--mantine-color-dracula-4);
+  --mantine-color-dracula-filled: var(--mantine-color-dracula-8);
+  --mantine-color-dracula-filled-hover: var(--mantine-color-dracula-9);
+  --mantine-color-dracula-light: rgba(123, 46, 218, 0.15);
+  --mantine-color-dracula-light-hover: rgba(123, 46, 218, 0.2);
+  --mantine-color-dracula-light-color: var(--mantine-color-dracula-3);
+  --mantine-color-dracula-outline: var(--mantine-color-dracula-4);
+  --mantine-color-dracula-outline-hover: rgba(147, 84, 224, 0.05);
+}
+:root[data-mantine-color-scheme='light'] {
+  --mantine-color-text: #101828;
+  --mantine-color-dracula-text: var(--mantine-color-dracula-filled);
+  --mantine-color-dracula-filled: var(--mantine-color-dracula-6);
+  --mantine-color-dracula-filled-hover: var(--mantine-color-dracula-7);
+  --mantine-color-dracula-light: rgba(123, 46, 218, 0.1);
+  --mantine-color-dracula-light-hover: rgba(123, 46, 218, 0.12);
+  --mantine-color-dracula-light-color: var(--mantine-color-dracula-6);
+  --mantine-color-dracula-outline: var(--mantine-color-dracula-6);
+  --mantine-color-dracula-outline-hover: rgba(123, 46, 218, 0.05);
+}
+
+input:focus,
+input:focus-within,
+div.mantine-PasswordInput-input:focus-within {
+  border-color: var(--mantine-color-dracula-6);
+}
+
+.mantine-focus-auto:focus-visible {
+  outline-color: var(--mantine-color-dracula-3);
+}

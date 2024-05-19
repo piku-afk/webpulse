@@ -9,10 +9,12 @@ ignoreWords:
   - ianvs
   - kysely
   - kyselify
+  - lucide
   - mantine
   - outfile
   - piku
   - pino
+  - reduxjs
   - supabase
   - syncpack
   - typebox

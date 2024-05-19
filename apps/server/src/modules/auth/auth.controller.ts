@@ -5,7 +5,7 @@ import { refreshToken, signIn } from './auth.service.js';
 
 export const handleSignIn: GenericRouteHandler<{
   Body: SignIn['body'];
-  Reply: { 200: SignIn['response']; 500: SignIn['error'] };
+  Reply: { 200: SignIn['response']; 400: SignIn['error'] };
 }> = async (req, rep) => {
   const { email, password } = req.body;
 
@@ -13,7 +13,7 @@ export const handleSignIn: GenericRouteHandler<{
 
   if (error) {
     logger.error(error);
-    return rep.code(500).send({ message: error.message });
+    return rep.code(400).send({ message: error.message });
   }
 
   const { access_token, refresh_token } = data.session;

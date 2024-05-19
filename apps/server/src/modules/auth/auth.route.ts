@@ -12,7 +12,7 @@ export const authRouter = async (fastify: FastifyInstance) => {
       body: SignInSchema.body,
       response: {
         200: SignInSchema.response,
-        500: SignInSchema.error,
+        400: SignInSchema.error,
       },
     },
     handler: handleSignIn,

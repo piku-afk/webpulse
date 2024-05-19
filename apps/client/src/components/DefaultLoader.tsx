@@ -1,7 +1,11 @@
+import { LoadingOverlay } from '@mantine/core';
+
 export const DefaultLoader = () => {
   return (
-    <>
-      <h1>Default Loader</h1>
-    </>
+    <LoadingOverlay
+      visible
+      loaderProps={{ color: 'dracula' }}
+      overlayProps={{ backgroundOpacity: 0, color: '#fff' }}
+    />
   );
 };

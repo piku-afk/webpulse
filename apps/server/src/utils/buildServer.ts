@@ -1,3 +1,4 @@
+import cors from '@fastify/cors';
 import type { TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import Fastify, { type FastifyInstance, type FastifyLoggerOptions } from 'fastify';
 
@@ -10,6 +11,10 @@ export const buildServer = async (): Promise<FastifyInstance> => {
   const fastify = Fastify({
     logger: logger as FastifyLoggerOptions,
   }).withTypeProvider<TypeBoxTypeProvider>();
+
+  await fastify.register(cors, {
+    origin: ['*'],
+  });
 
   // register routes
   await fastify.register(

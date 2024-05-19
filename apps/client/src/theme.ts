@@ -17,4 +17,33 @@ export const theme = createTheme({
   colors: {
     dracula,
   },
+  headings: {
+    fontFamily: "'Inter Variable', sans-serif",
+  },
+  black: '#101828',
+  defaultRadius: 8,
+  cursorType: 'pointer',
+  components: {
+    Button: {
+      defaultProps: {
+        color: 'dracula',
+      },
+    },
+    TextInput: {
+      styles: {
+        label: {
+          marginBottom: 6,
+          fontSize: 14,
+        },
+      },
+    },
+    PasswordInput: {
+      styles: {
+        label: {
+          marginBottom: 6,
+          fontSize: 14,
+        },
+      },
+    },
+  },
 });

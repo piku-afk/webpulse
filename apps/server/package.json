@@ -12,6 +12,7 @@
     "build": "tsx esbuild.ts"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
     "@fastify/type-provider-typebox": "^4.0.0",
     "@supabase/supabase-js": "^2.43.2",
     "@webpulse/constants": "workspace:*",
