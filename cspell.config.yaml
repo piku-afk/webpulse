@@ -7,6 +7,7 @@ ignoreWords:
   - dotenvx
   - fastify
   - ianvs
+  - isbot
   - kysely
   - kyselify
   - lucide
@@ -14,6 +15,7 @@ ignoreWords:
   - outfile
   - piku
   - pino
+  - pipeable
   - reduxjs
   - supabase
   - syncpack
