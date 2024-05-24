@@ -13,7 +13,7 @@ import { theme } from './theme';
 export const App = () => {
   return (
     <Provider store={store}>
-      <MantineProvider theme={theme} >
+      <MantineProvider theme={theme}>
         <ModalsProvider modals={modalConfig}>
           <RouterProvider fallbackElement={<DefaultLoader />} router={router} />
           <Notifications position="top-center" limit={2} />

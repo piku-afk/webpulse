@@ -4,6 +4,7 @@ import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { DefaultLoader } from '../components/DefaultLoader';
+import { Header } from '../components/Header';
 import { CookiesName } from '../constants/cookieNames';
 import { ModalIds } from '../constants/modals';
 
@@ -30,6 +31,8 @@ export const Component = () => {
 
   return (
     <Suspense fallback={<DefaultLoader />}>
+      <Header />
+
       <Outlet />
     </Suspense>
   );

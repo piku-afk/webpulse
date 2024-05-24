@@ -24,6 +24,11 @@ export const theme = createTheme({
   defaultRadius: 8,
   cursorType: 'pointer',
   components: {
+    ActionIcon: {
+      defaultProps: {
+        color: 'dracula',
+      },
+    },
     Button: {
       defaultProps: {
         color: 'dracula',

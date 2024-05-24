@@ -12,7 +12,7 @@ import {
 import { Check, X } from 'lucide-react';
 
 import { useGetHealthQuery } from '../apis/health.api';
-import { Header } from '../components/Header';
+import { LogoWithText } from '../components/LogoWithText';
 
 interface TableDataProps {
   name: string;
@@ -61,43 +61,41 @@ export const Component = () => {
     { name: 'Database', status: database },
   ];
 
-  const isNormal = appStatuses.map(app => app.status).every(Boolean);
+  const isNormal = appStatuses.map((app) => app.status).every(Boolean);
 
   return (
-    <Box>
-      <Header />
+    <Container component="main" py={24}>
+      <LogoWithText />
 
-      <Container component='main' py={24}>
-        <Skeleton visible={isLoading}>
-          {isNormal ? (
-            <Alert color="teal" title="All System Operational" />
-          ) : (
-            <Alert color="red" title="System Issues Detected" />
-          )}
-        </Skeleton>
+      <Skeleton visible={isLoading} style={{ marginTop: 32 }}>
+        {isNormal ? (
+          <Alert color="teal" title="All System Operational" />
+        ) : (
+          <Alert color="red" title="System Issues Detected" />
+        )}
+      </Skeleton>
 
-        <Card mt={24} withBorder shadow="sm" p={0}>
-          <Table withColumnBorders>
-            <Table.Tbody>
-              {isLoading
-                ? splitArray(appStatuses).map((items) => (
-                    <Table.Tr key={items[0].name}>
-                      {items.map((item) => (
-                        <TableDataSkeleton key={item.name} />
-                      ))}
-                    </Table.Tr>
-                  ))
-                : splitArray(appStatuses).map(([item1, item2]) => (
-                    <Table.Tr key={item1.name}>
-                      <TableData name={item1.name} status={item1.status ?? false} />
-                      <TableData name={item2.name} status={item2.status ?? false} />
-                    </Table.Tr>
-                  ))}
-            </Table.Tbody>
-          </Table>
-        </Card>
-      </Container>
-    </Box>
+      <Card mt={24} withBorder shadow="sm" p={0}>
+        <Table withColumnBorders>
+          <Table.Tbody>
+            {isLoading
+              ? splitArray(appStatuses).map((items) => (
+                  <Table.Tr key={items[0].name}>
+                    {items.map((item) => (
+                      <TableDataSkeleton key={item.name} />
+                    ))}
+                  </Table.Tr>
+                ))
+              : splitArray(appStatuses).map(([item1, item2]) => (
+                  <Table.Tr key={item1.name}>
+                    <TableData name={item1.name} status={item1.status ?? false} />
+                    <TableData name={item2.name} status={item2.status ?? false} />
+                  </Table.Tr>
+                ))}
+          </Table.Tbody>
+        </Table>
+      </Card>
+    </Container>
   );
 };
 

@@ -10,7 +10,6 @@ export const SessionExpiredModal = () => {
   return (
     <>
       <Text c="dimmed" size="sm">
-        {/* Your session has expired. Please log in again to continue. */}
         It looks like your session has expired. For your security, please sign in again to continue.
       </Text>
       <Button fullWidth mt="md" onClick={handleClick}>
