@@ -7,6 +7,13 @@
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
     "jsx": "react-jsx",
+
+    "paths": {
+      "#assets/*": ["./app/assets/*"],
+      "#components/*": ["./app/components/*"],
+      "#constants/*": ["./app/constants/*"],
+      "#utils/*": ["./app/utils/*"]
+    }
   },
   "include": ["app"],
 }
