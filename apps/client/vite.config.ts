@@ -1,6 +1,6 @@
-import { vitePlugin as remix } from "@remix-run/dev";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import { vitePlugin as remix } from '@remix-run/dev';
+import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
@@ -15,10 +15,10 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
-    host: true
+    host: true,
   },
   preview: {
     port: 3000,
-    host: true
-  }
+    host: true,
+  },
 });

@@ -1,0 +1,13 @@
+:root {
+  font-family: 'Inter Variable', sans-serif;
+}
+
+input:focus,
+input:focus-within,
+div.mantine-PasswordInput-input:focus-within {
+  border-color: var(--mantine-color-dracula-6);
+}
+
+.mantine-focus-auto:focus-visible {
+  outline-color: var(--mantine-color-dracula-3);
+}

@@ -1,3 +1,4 @@
+import { Container, Title } from '@mantine/core';
 import type { MetaFunction } from '@remix-run/node';
 
 export const meta: MetaFunction = () => {
@@ -13,9 +14,9 @@ export const meta: MetaFunction = () => {
 
 const Home = () => {
   return (
-    <div>
-      <h1>Remix + Fastify</h1>
-    </div>
+    <Container>
+      <Title order={1}>Remix + Mantine + Vite</Title>
+    </Container>
   );
 };
 
