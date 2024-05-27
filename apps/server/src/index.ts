@@ -19,7 +19,7 @@ try {
   logger.error(error);
   process.exit(1);
 } finally {
-  closeWithGrace({ delay: 10000 }, async () => {
+  closeWithGrace({ delay: 10_000 }, async () => {
     if (server) {
       logger.info('Initiating graceful shutdown');
       await server.close();
