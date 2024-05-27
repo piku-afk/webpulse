@@ -1,4 +1,15 @@
 services:
+  client:
+    image: pikuafk/webpulse.client
+    env_file:
+      - .env.prod
+    container_name: webpulse.client
+    build:
+      context: .
+      target: client
+    ports:
+      - 3000:3000
+
   server:
     image: pikuafk/webpulse.server
     env_file:
