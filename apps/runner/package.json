@@ -1,0 +1,26 @@
+{
+  "name": "@webpulse/runner",
+  "version": "0.0.0",
+  "author": "piku-afk",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.2",
+    "@webpulse/logger": "workspace:*",
+    "@webpulse/schemas": "workspace:*",
+    "kysely": "^0.27.3",
+    "kysely-supabase": "^0.1.0",
+    "lighthouse": "^12.0.0",
+    "pg": "^8.11.5",
+    "puppeteer": "^22.10.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.6",
+    "@webpulse/ts-config": "workspace:*",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5"
+  }
+}
