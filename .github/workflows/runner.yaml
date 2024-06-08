@@ -1,4 +1,4 @@
-name: main
+name: runner
 
 on:
   workflow_dispatch:
@@ -26,9 +26,9 @@ jobs:
       - name: Load Environment Variables
         run: |
           touch .env.production
-          echo DATABASE_URL=${{secrets.DATABASE_URL}} >> .env.production
-          echo SUPABASE_URL=${{secrets.SUPABASE_URL}} >> .env.production
-          echo SUPABASE_KEY=${{secrets.SUPABASE_KEY}} >> .env.production
+          echo DATABASE_URL=${{secrets.DATABASE_URL}} >> .env.prod
+          echo SUPABASE_URL=${{secrets.SUPABASE_URL}} >> .env.prod
+          echo SUPABASE_KEY=${{secrets.SUPABASE_KEY}} >> .env.prod
 
       - name: Install Dependencies
         run: pnpm install
