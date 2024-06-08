@@ -1,0 +1,37 @@
+name: main
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs daily at 6:00 AM IST
+    - cron: '30 0 * * *'
+
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9.2.0
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Load Environment Variables
+        run: |
+          touch .env.production
+          echo DATABASE_URL=${{secrets.DATABASE_URL}} >> .env.production
+          echo SUPABASE_URL=${{secrets.SUPABASE_URL}} >> .env.production
+          echo SUPABASE_KEY=${{secrets.SUPABASE_KEY}} >> .env.production
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Run
+        run: pnpm run start --filter @webpulse/runner

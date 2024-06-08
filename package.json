@@ -5,7 +5,7 @@
   "author": "piku-afk",
   "license": "MIT",
   "type": "module",
-  "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
+  "packageManager": "pnpm@9.2.0+sha256.94fab213df221c55b6956b14a2264c21c6203cca9f0b3b95ff2fe9b84b120390",
   "scripts": {
     "dev": "dotenvx run -f .env.prod -- turbo run dev",
     "build": "turbo run build",
