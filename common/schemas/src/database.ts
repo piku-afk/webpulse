@@ -40,7 +40,7 @@ export type Database = {
         Row: {
           description: string | null;
           documentationLink: string | null;
-          id: number;
+          id: string;
           key: string;
           title: string;
           unit: string | null;
@@ -48,7 +48,7 @@ export type Database = {
         Insert: {
           description?: string | null;
           documentationLink?: string | null;
-          id?: number;
+          id?: string;
           key: string;
           title: string;
           unit?: string | null;
@@ -56,7 +56,7 @@ export type Database = {
         Update: {
           description?: string | null;
           documentationLink?: string | null;
-          id?: number;
+          id?: string;
           key?: string;
           title?: string;
           unit?: string | null;
@@ -66,35 +66,35 @@ export type Database = {
       audits: {
         Row: {
           actual_value: number;
-          audit_detailsId: number;
-          id: number;
-          reportsId: number;
+          audit_detailsId: string;
+          id: string;
+          reportsId: string;
           score: number;
         };
         Insert: {
           actual_value: number;
-          audit_detailsId: number;
-          id?: number;
-          reportsId: number;
+          audit_detailsId: string;
+          id?: string;
+          reportsId: string;
           score: number;
         };
         Update: {
           actual_value?: number;
-          audit_detailsId?: number;
-          id?: number;
-          reportsId?: number;
+          audit_detailsId?: string;
+          id?: string;
+          reportsId?: string;
           score?: number;
         };
         Relationships: [
           {
-            foreignKeyName: 'audits_audit_detailsId_fkey';
+            foreignKeyName: 'audits_audit_detailsid_fkey';
             columns: ['audit_detailsId'];
             isOneToOne: false;
             referencedRelation: 'audit_details';
             referencedColumns: ['id'];
           },
           {
-            foreignKeyName: 'audits_reportsId_fkey';
+            foreignKeyName: 'audits_reportsid_fkey';
             columns: ['reportsId'];
             isOneToOne: false;
             referencedRelation: 'reports';
@@ -105,28 +105,25 @@ export type Database = {
       reports: {
         Row: {
           created_at: string;
-          file_slug: string | null;
-          id: number;
+          id: string;
           version: string;
-          websitesId: number;
+          websitesId: string;
         };
         Insert: {
-          created_at?: string;
-          file_slug?: string | null;
-          id?: number;
+          created_at: string;
+          id?: string;
           version: string;
-          websitesId: number;
+          websitesId: string;
         };
         Update: {
           created_at?: string;
-          file_slug?: string | null;
-          id?: number;
+          id?: string;
           version?: string;
-          websitesId?: number;
+          websitesId?: string;
         };
         Relationships: [
           {
-            foreignKeyName: 'reports_websitesId_fkey';
+            foreignKeyName: 'reports_websitesid_fkey';
             columns: ['websitesId'];
             isOneToOne: false;
             referencedRelation: 'websites';
@@ -137,19 +134,19 @@ export type Database = {
       websites: {
         Row: {
           active: boolean;
-          id: number;
+          id: string;
           name: string | null;
           url: string;
         };
         Insert: {
           active?: boolean;
-          id?: number;
+          id?: string;
           name?: string | null;
           url: string;
         };
         Update: {
           active?: boolean;
-          id?: number;
+          id?: string;
           name?: string | null;
           url?: string;
         };
