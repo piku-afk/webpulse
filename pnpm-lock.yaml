@@ -156,6 +156,9 @@ importers:
 
   apps/server:
     dependencies:
+      '@fastify/auth':
+        specifier: ^4.6.1
+        version: 4.6.1
       '@fastify/cors':
         specifier: ^9.0.1
         version: 9.0.1
@@ -196,6 +199,9 @@ importers:
       '@webpulse/ts-config':
         specifier: workspace:*
         version: link:../../common/ts-config
+      '@webpulse/utilities':
+        specifier: workspace:*
+        version: link:../../common/utilities
       concurrently:
         specifier: ^8.2.2
         version: 8.2.2
@@ -254,6 +260,22 @@ importers:
         version: 5.4.5
 
   common/ts-config: {}
+
+  common/utilities:
+    dependencies:
+      '@remix-run/node':
+        specifier: ^2.9.2
+        version: 2.9.2(typescript@5.4.5)
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
+    devDependencies:
+      '@webpulse/ts-config':
+        specifier: workspace:*
+        version: link:../ts-config
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
 packages:
   '@ampproject/remapping@2.3.0':
@@ -1279,6 +1301,12 @@ packages:
     resolution:
       {
         integrity: sha512-ebbEtlI7dxXF5ziNdr05mOY8NnDiPB1XvAlLHctRt/Rc+C3LCOVW5imUVX+mhvUhnNzmPBHewUkOFgGlCxgdAA==,
+      }
+
+  '@fastify/auth@4.6.1':
+    resolution:
+      {
+        integrity: sha512-J/UkZw6EYUX7aXu78YLV1uE1ESbHsGNKxyO+H82ixdC3AnzBT8qeBI6K19mqVHfJTICy5m9uspj7PjC7EvZQ/A==,
       }
 
   '@fastify/busboy@2.1.1':
@@ -8328,6 +8356,11 @@ snapshots:
       ajv: 8.13.0
       ajv-formats: 2.1.1(ajv@8.13.0)
       fast-uri: 2.3.0
+
+  '@fastify/auth@4.6.1':
+    dependencies:
+      fastify-plugin: 4.5.1
+      reusify: 1.0.4
 
   '@fastify/busboy@2.1.1': {}
 

@@ -111,6 +111,6 @@ export const saveReport = async (websiteId: string, result: Result | undefined):
   logger.info('Audits saved in database');
 };
 
-export const getAllWebsites = async (): Promise<Tables<'websites'>[]> => {
-  return await db.selectFrom('websites').selectAll().execute();
+export const getAllActiveWebsites = async (): Promise<Tables<'websites'>[]> => {
+  return await db.selectFrom('websites').where('active', '=', true).selectAll().execute();
 };
